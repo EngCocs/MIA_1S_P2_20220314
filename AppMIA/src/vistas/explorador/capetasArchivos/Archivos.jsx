@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import folderImg from "../../../assets/folder.png";
 import fileImg from "../../../assets/documento.png";
 import "./Archivos.css";
+import getBackendIp from "../../../config";
 // Este componente permite explorar archivos y carpetas en una partición específica.
 export default function Archivos({ particion, volver }) {
   const [contenido, setContenido] = useState([]);
@@ -9,6 +10,7 @@ export default function Archivos({ particion, volver }) {
   const [contenidoArchivo, setContenidoArchivo] = useState(null);
 
   useEffect(() => {
+    const ip = getBackendIp();
     const obtenerContenido = async () => {
       console.log("🔴 particion en useEffect:", particion);  // Verificar si particion tiene un valor
     console.log("🔴 particion.id:", particion ? particion.id : "undefined");  // Verificar el valor de particion.id
@@ -18,7 +20,7 @@ export default function Archivos({ particion, volver }) {
       return;
     }
       try {
-        const baseURL = "http://localhost:4000/explorar";
+        const baseURL = `${ip}/explorar`;
         const url = `${baseURL}?path=${encodeURIComponent(rutaActual)}&particion=${particion.id}`;  // Enviar el ID de la partición
 
       console.log("🚀 URL de la solicitud:", url);  // Aquí imprimimos la URL para verificar que el ID está siendo pasado
@@ -60,9 +62,11 @@ export default function Archivos({ particion, volver }) {
   };
 
   const leerArchivo = async (nombre) => {
+    const ip = getBackendIp();
     const rutaArchivo = rutaActual === "/" ? `/${nombre}` : `${rutaActual}/${nombre}`;
     try {
-      const res = await fetch(`http://localhost:4000/leer?path=${encodeURIComponent(rutaArchivo)}`);
+      const res = await fetch(`${ip}/leer?path=${encodeURIComponent(rutaArchivo)}`);
+
       const texto = await res.text();
       setContenidoArchivo({ nombre, texto });
     } catch (err) {

@@ -38,7 +38,8 @@ func main() {
 
 
 	fmt.Println("Servidor escuchando en http://localhost:4000")
-	http.ListenAndServe(":4000", nil)
+	http.ListenAndServe("0.0.0.0:4000", nil)
+
 }
 
 func ejecutarHandler(w http.ResponseWriter, r *http.Request) {
@@ -276,7 +277,7 @@ func listarDiscosHandler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    carpeta := "/home/emilio/Calificacion_MIA/Discos" // Ajusta si tu ruta es distinta
+    carpeta := "/home/ubuntu/Calificacion_MIA/Discos" // Ajusta si tu ruta es distinta
     archivos, err := ioutil.ReadDir(carpeta)
     if err != nil {
         http.Error(w, "Error al leer los discos", http.StatusInternalServerError)

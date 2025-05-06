@@ -7,39 +7,39 @@
 
 #******* CREACION DE DISCO *******
 # 60M A
-Mkdisk -size=60 -unit=M -fit=FF -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia
+Mkdisk -size=60 -unit=M -fit=FF -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia
 
-
+http://54.152.47.236:4000
 #******* CREACION DE PARTICIONES *******
 #DISCO 1
 # 20M
-fdisk -type=P -unit=b -name=Part1 -size=20971520 -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -fit=BF
+fdisk -type=P -unit=b -name=Part1 -size=20971520 -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -fit=BF
 # 10M
-fdisk -type=P -unit=k -name=Part2 -size=10240 -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -fit=BF
+fdisk -type=P -unit=k -name=Part2 -size=10240 -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -fit=BF
 # 10M
-fdisk -type=P -unit=M -name=Part3 -size=10 -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -fit=BF
+fdisk -type=P -unit=M -name=Part3 -size=10 -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -fit=BF
 # 10M
-fdisk -type=P -unit=b -name=Part4 -size=10485760 -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -fit=BF
+fdisk -type=P -unit=b -name=Part4 -size=10485760 -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -fit=BF
 
 
 #ELIMINANDO PARTICIONES
-#fdisk -delete=fast -name=Part3 -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia
-#fdisk -delete=fast -name=Part4 -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia 
+#fdisk -delete=fast -name=Part3 -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia
+#fdisk -delete=fast -name=Part4 -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia 
 
 
 #QUITNADO ESPACIO
-#fdisk -add=-500 -size=10240 -unit=k -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -name=Part2
+#fdisk -add=-500 -size=10240 -unit=k -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -name=Part2
 
 
 #AGREGANDO ESPACIO 
-#fdisk -add=500 -unit=k -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -name=Part2
+#fdisk -add=500 -unit=k -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -name=Part2
  
 #******* MONTAR PARTICIONES *******
 #DISCO 1
 #141a -> 14 sus ultimos dos digitos
-mount -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -name=Part1
+mount -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -name=Part1
 #142a -> 14 sus ultimos dos digitos
-mount -path=/home/emilio/Calificacion_MIA/Discos/Disco1.mia -name=Part2
+mount -path=/home/ubuntu/Calificacion_MIA/Discos/Disco1.mia -name=Part2
 
 
 #******* DESMONTAR PARTICION *******

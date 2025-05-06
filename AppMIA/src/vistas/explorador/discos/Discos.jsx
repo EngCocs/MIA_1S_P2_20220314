@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import "./Discos.css";
 import discoImg from "../../../assets/discoC.png";
-
+import getBackendIp from "../../../config";
 function Discos({ onSeleccionarDisco }) {
   const [discos, setDiscos] = useState([]);
 
   useEffect(() => {
+    const ip = getBackendIp();
     const obtenerDiscos = async () => {
       try {
-        const response = await fetch("http://localhost:4000/listar-disks", {
+        const response = await fetch(`${ip}/listar-disks`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });

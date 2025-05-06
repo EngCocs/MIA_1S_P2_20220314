@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Consola.css";
 import { useNavigate } from "react-router-dom";
 import { useConsole } from "../contexto/ConsoleContex.jsx";
+import getBackendIp from "../config"; // al inicio
 
 function Consola() { 
   const { code, setCode, output, setOutput, backendIp, setBackendIp } = useConsole();
@@ -11,11 +12,20 @@ function Consola() {
   const [usandoIpManual, setUsandoIpManual] = useState(false);
 
   // Función para obtener la IP pública del backend
+  useEffect(() => {
+    const savedIp = getBackendIp();
+    if (savedIp) {
+      setBackendIp(savedIp);
+      setUsandoIpManual(true);
+    } else {
+      setBackendIp(backendIp);
+    }
+  }, [])
   const obtenerIpPublica = async () => {
     if (usandoIpManual) return; //  No sobrescribir si ya fue definida manualmente
   
     try {
-      const response = await fetch("http://localhost:4000/obtener-ip"); // tu endpoint en Go
+      const response = await fetch(`${backendIp}/obtener-ip`); // tu endpoint en Go
       if (!response.ok) throw new Error("No se pudo obtener la IP pública");
       const data = await response.json();
       setBackendIp(data.ip);  //  Establece la IP obtenida
@@ -103,9 +113,12 @@ function Consola() {
           type="text"
           value={backendIp}
           onFocus={() => setUsandoIpManual(true)} // Al enfocar, se activa el modo manual
-          onChange={(e) => setBackendIp(e.target.value)}
+          onChange={(e) => {
+            setBackendIp(e.target.value);
+            localStorage.setItem("backendIp", e.target.value);
+          }}
           placeholder="http://3.84.XXX.XXX:4000"
-          style={{ width: "150px", padding: "5px" }}
+          style={{ width: "200px", padding: "5px" }}
         />
       </div>
 
