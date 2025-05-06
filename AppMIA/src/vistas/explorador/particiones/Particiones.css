@@ -1,0 +1,47 @@
+.particiones-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .main-title {
+    color: #00d9ff;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .particiones-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .particion-card {
+    background: #1a1a1a;
+    border: 2px solid #00d9ff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .particion-img {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .particion-info {
+    color: #ccc;
+  }
+  
+  .btn-volver {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00d9ff;
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

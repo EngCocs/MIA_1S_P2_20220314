@@ -1,0 +1,126 @@
+digraph Bloques {
+rankdir=LR;
+node [shape=plaintext];
+block0 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>.</td><td>0</td></tr>
+<tr><td>..</td><td>0</td></tr>
+<tr><td>users.txt</td><td>1</td></tr>
+<tr><td>test</td><td>2</td></tr>
+</table>>];
+block1 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>1,G,root
+1,U</td><td>1869574700</td></tr>
+<tr><td>t,root,123
+</td><td>0</td></tr>
+</table>>];
+block2 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>.</td><td>2</td></tr>
+<tr><td>..</td><td>0</td></tr>
+<tr><td>indirecto</td><td>3</td></tr>
+</table>>];
+block3 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>.</td><td>3</td></tr>
+<tr><td>..</td><td>2</td></tr>
+<tr><td>archivo_dire</td><td>2</td></tr>
+</table>>];
+block4 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>012345678901</td><td>892613426</td></tr>
+<tr><td>678901234567</td><td>825243960</td></tr>
+<tr><td>234567890123</td><td>926299444</td></tr>
+<tr><td>890123456789</td><td>858927408</td></tr>
+</table>>];
+block5 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>456789012345</td><td>959985462</td></tr>
+<tr><td>012345678901</td><td>892613426</td></tr>
+<tr><td>678901234567</td><td>825243960</td></tr>
+<tr><td>234567890123</td><td>926299444</td></tr>
+</table>>];
+block6 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>890123456789</td><td>858927408</td></tr>
+<tr><td>456789012345</td><td>959985462</td></tr>
+<tr><td>012345678901</td><td>892613426</td></tr>
+<tr><td>678901234567</td><td>825243960</td></tr>
+</table>>];
+block7 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>234567890123</td><td>926299444</td></tr>
+<tr><td>890123456789</td><td>858927408</td></tr>
+<tr><td>456789012345</td><td>959985462</td></tr>
+<tr><td>012345678901</td><td>892613426</td></tr>
+</table>>];
+block8 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>678901234567</td><td>825243960</td></tr>
+<tr><td>234567890123</td><td>926299444</td></tr>
+<tr><td>890123456789</td><td>858927408</td></tr>
+<tr><td>456789012345</td><td>959985462</td></tr>
+</table>>];
+block9 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>012345678901</td><td>892613426</td></tr>
+<tr><td>678901234567</td><td>825243960</td></tr>
+<tr><td>234567890123</td><td>926299444</td></tr>
+<tr><td>890123456789</td><td>858927408</td></tr>
+</table>>];
+block10 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>456789012345</td><td>959985462</td></tr>
+<tr><td>012345678901</td><td>892613426</td></tr>
+<tr><td>678901234567</td><td>825243960</td></tr>
+<tr><td>234567890123</td><td>926299444</td></tr>
+</table>>];
+block11 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+<tr><td>890123456789</td><td>858927408</td></tr>
+<tr><td>456789012345</td><td>959985462</td></tr>
+<tr><td>012345678901</td><td>892613426</td></tr>
+<tr><td>678901234567</td><td>825243960</td></tr>
+</table>>];
+block393127 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+</table>>];
+block393139 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+</table>>];
+block393173 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+</table>>];
+block393197 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+</table>>];
+block393198 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+</table>>];
+block393202 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+</table>>];
+block393212 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#CCE5FF'><b>Bloque Carpeta</b></td></tr>
+</table>>];
+}

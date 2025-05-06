@@ -1,0 +1,46 @@
+.discos-container {
+    padding: 20px;
+    background-color: #0d0d0d;
+    color: white;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .main-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #00bfff;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    margin-bottom: 20px;
+  }
+  
+  .discos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .disco-card {
+    background-color: #1a1a1a;
+    border: 2px solid #0072ff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 114, 255, 0.5);
+    text-align: center;
+  }
+  
+  .disco-img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .disco-info pre {
+    background: #121212;
+    padding: 10px;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 14px;
+    overflow-x: auto;
+    text-align: left;
+  }
+  

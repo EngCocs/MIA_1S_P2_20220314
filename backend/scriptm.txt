@@ -1,0 +1,47 @@
+#execute -path=scriptm.txt
+
+mkdisk -Size=10 -unit=M -path=./Discos/Disco1.mia
+mkdisk -Size=20 -unit=M -path=./Discos/Disco2.mia
+
+fdisk -Size=5 -unit=M -path=./Discos/Disco1.mia -name=Particion1
+fdisk -Size=4 -unit=M -path=./Discos/Disco1.mia -name=Particion2
+
+fdisk -Size=10 -unit=M -path=./Discos/Disco2.mia -name=Particion3
+fdisk -Size=8 -unit=M -path=./Discos/Disco2.mia -name=Particion4
+
+
+mount -path=./Discos/Disco1.mia -name=Particion1
+mount -path=./Discos/Disco2.mia -name=Particion3
+
+mount -path=./Discos/Disco1.mia -name=Particion2
+mount -path=./Discos/Disco2.mia -name=Particion4
+
+mounted
+mkfs -id=142B
+login -user=root -pass=123 -id=142B
+#login -user=user1 -pass=usuario -id=142B
+mkgrp -name=usuarios
+mkgrp -name=usuarios1
+mkgrp -name=usuarios2
+mkgrp -name=usuarios​4
+mkgrp -name=usuarios5
+mkgrp -name=usuarios6
+rmgrp -name=usuarios
+mkusr -user=user1 -pass=usuario -grp=usuarios1
+mkusr -user=user2 -pass=usuario -grp=usuarios2
+rmgrp -name=usuarios6
+#Cambia el grupo del user2​
+chgrp -user=user2 -grp=usuarios1
+#Cambia el grupo del user1​
+chgrp -user=user1 -grp=usuarios2
+rmgrp -name=usuarios5
+mkdir -p -path=/home/user/docs/usac​
+mkgrp -name=usuarios7
+rmgrp -name=usuarios7
+mkfile -size=15 -path=/home/user/docs/a.txt -r
+cat -file1="/home/user/docs/a.txt"
+#cat -file1="/home/a.txt" -file2="/home/b.txt" -file3="/home/c.txt"
+rep -id=142B -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/reporte1.jpg -name=mbr
+#rep -id=142B -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/report2.jpg -name=disk
+#/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend
+#rep -id=142B -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/report3.jpg -name=inode

@@ -1,0 +1,30 @@
+#execute -path=zmulti_inodos.txt
+
+# Crear el disco y la partición
+mkdisk -size=3 -unit=M -path=./Discos/MultiInodo.dsk
+fdisk -size=2 -unit=M -path=./Discos/MultiInodo.dsk -name=MultiPart
+
+# Montar y formatear
+mount -path=./Discos/MultiInodo.dsk -name=MultiPart
+mkfs -id=141A
+login -user=root -pass=123 -id=141A
+
+# Crear varias carpetas
+mkdir -p -path=/proyecto
+mkdir -p -path=/proyecto/docs
+mkdir -p -path=/proyecto/codigo
+mkdir -p -path=/proyecto/img
+
+# Crear múltiples archivos en diferentes carpetas
+mkfile -path=/proyecto/docs/manual.txt -size=15 -r
+mkfile -path=/proyecto/codigo/main.go -size=25 -r
+mkfile -path=/proyecto/img/logo.png -size=10 -r
+mkfile -path=/proyecto/README.md -size=5
+mkfile -path=/testfile1.txt -size=3
+mkfile -path=/testfile2.txt -size=3
+
+# Generar reporte de inodos
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/inodos_multi_rep.jpg -name=inode
+
+# Generar reporte de bloques (opcional)
+#rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/blocks_multi_rep.jpg -name=block

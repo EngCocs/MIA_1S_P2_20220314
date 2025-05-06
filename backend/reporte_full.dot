@@ -1,0 +1,4 @@
+digraph DISK {
+node [shape=record];
+structDisk [label="MBR| Primaria (20%)| Extendida (60%)| EBR| Logica (20%)| EBR| Logica (20%)| Primaria (10%)| Libre (10%)"]
+}

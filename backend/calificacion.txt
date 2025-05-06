@@ -1,0 +1,22 @@
+#DISCO 5
+#execute -path=calificacion.txt
+mkDisk -size=20 -unit=M -fit=WF -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia
+
+
+# 5MB
+fdisk -type=E -unit=k -name=Part51 -size=5120 -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia -fit=BF
+# 1MB
+fdisk -type=L -unit=k -name=Part52 -size=1024 -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia -fit=BF
+# 5MB
+fdisk -type=P -unit=k -name=Part53 -size=5120 -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia -fit=BF
+# 1MB
+fdisk -type=L -unit=k -name=Part54 -size=1024 -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia -fit=BF
+# 1MB
+fdisk -type=L -unit=k -name=Part55 -size=1024 -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia -fit=BF
+# 1MB
+fdisk -type=L -unit=k -name=Part56 -size=1024 -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia -fit=BF
+mount -path=/home/emilio/Calificacion_MIA/Discos/Disco5.mia -name=Part53 
+
+
+rep -id=141A -path=/home/emilio/Reportes/mbrB.jpg -name=mbr
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/report7.jpg -name=tree

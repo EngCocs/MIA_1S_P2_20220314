@@ -1,0 +1,15 @@
+#execute -path=inodos.txt
+
+mkdisk -size=2 -unit=M -path=./Discos/PruebaInodo.dsk
+
+fdisk -size=1 -unit=M -path=./Discos/PruebaInodo.dsk -name=PartInodo
+
+mount -path=./Discos/PruebaInodo.dsk -name=PartInodo
+
+mkfs -id=141A
+
+login -user=root -pass=123 -id=141A
+
+mkfile -path=/archivo1.txt -size=10
+
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/inodo_rep.jpg -name=inode

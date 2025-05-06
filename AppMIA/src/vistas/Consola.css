@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* ===== Título principal ===== */
+.main-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #0072ff;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5em;
+  text-shadow: 0 0 15px rgba(0, 114, 255, 0.7);
+  letter-spacing: 2px;
+}
+
+/* ===== Contenedor principal ===== */
+.console-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* ===== Sidebar con botones ===== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 20px;
+  align-items: center;
+  width: 200px;
+}
+
+/* ===== Botones futuristas ===== */
+.btn {
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.primary { background: #007bfffa; }
+.primary:hover { background: #0b7dda; }
+
+.success { background: #04AA6D; }
+.success:hover { background: #46a049; }
+
+.danger { background: #f44336; }
+danger:hover { background: #da190b; }
+
+/* ===== Separadores ===== */
+.separator {
+  width: 80%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 5px 0;
+}
+
+/* ===== Área de Texto con Numeración ===== */
+.textareas {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 90vh;
+}
+
+.editor-container {
+  display: flex;
+  height: 50%;
+  background: #121212;
+  border: 2px solid #0072ff;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.line-numbers {
+  width: 40px;
+  padding: 10px;
+  background: #1e1e1e;
+  color: #888;
+  text-align: right;
+  font-size: 14px;
+  line-height: 20px;
+  user-select: none;
+  overflow: hidden;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+  resize: none;
+  outline: none;
+}
+
+/* ===== Ocultar input file real ===== */
+.hidden-file-input {
+  display: none;
+}
+
+/* ===== Logo de GitHub ===== */
+.github-logo {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: #ffffff;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.github-logo:hover {
+  color: #0072ff;
+  transform: scale(1.1);
+  text-shadow: 0 0 15px rgba(0, 114, 255, 0.5);
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.8em;
+    margin: 10px 0;
+  }
+
+  .github-logo {
+    font-size: 1.5rem;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .console-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

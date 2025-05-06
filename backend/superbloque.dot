@@ -1,0 +1,75 @@
+digraph sb {
+node [shape=plaintext];
+sb [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2' bgcolor='#004466'><font color='white'><b>Reporte de SUPERBLOQUE</b></font></td></tr>
+ <tr>
+  <td bgcolor='Azure'> S_filesystem_type </td> 
+  <td bgcolor='Azure'> EXT2 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_inodes_count </td> 
+  <td bgcolor='#7FC97F'> 131071 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_blocks_count </td> 
+  <td bgcolor='Azure'> 393213 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_free_inodes_count </td> 
+  <td bgcolor='#7FC97F'> 131069 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_free_blocks_count </td> 
+  <td bgcolor='Azure'> 393211 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_mtime </td> 
+  <td bgcolor='#7FC97F'> 30/03/2025 04:15 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_umtime </td> 
+  <td bgcolor='Azure'> 30/03/2025 04:15 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_mnt_count </td> 
+  <td bgcolor='#7FC97F'> 1 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_magic </td> 
+  <td bgcolor='Azure'> 61267 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_inode_size </td> 
+  <td bgcolor='#7FC97F'> 124 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_block_size </td> 
+  <td bgcolor='Azure'> 64 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_first_ino </td> 
+  <td bgcolor='#7FC97F'> 2 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_first_blo </td> 
+  <td bgcolor='Azure'> 2 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_bm_inode_start </td> 
+  <td bgcolor='#7FC97F'> 257 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_bm_block_start </td> 
+  <td bgcolor='Azure'> 131328 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='#7FC97F'> S_inode_start </td> 
+  <td bgcolor='#7FC97F'> 524541 </td> 
+ </tr> 
+ <tr>
+  <td bgcolor='Azure'> S_block_start </td> 
+  <td bgcolor='Azure'> 16777345 </td> 
+ </tr> 
+</table>>];
+}

@@ -1,0 +1,28 @@
+#execute -path=script2.txt
+
+#mkdisk -Size=10 -unit=M -path=./Discos/Disco1.mia
+mkdisk -Size=20 -unit=M -path=./Discos/Disco2.mia
+
+#fdisk -Size=5 -unit=M -path=./Discos/Disco1.mia -name=Particion1
+#fdisk -Size=4 -unit=M -path=./Discos/Disco1.mia -name=Particion2
+
+fdisk -Size=10 -unit=M -path=./Discos/Disco2.mia -name=Particion3
+fdisk -Size=9 -unit=M -path=./Discos/Disco2.mia -name=Particion4
+
+
+#mount -path=./Discos/Disco1.mia -name=Particion1
+#mount -path=./Discos/Disco2.mia -name=Particion3
+
+#mount -path=./Discos/Disco1.mia -name=Particion2
+mount -path=./Discos/Disco2.mia -name=Particion4
+
+mounted
+mkfs -id=141A
+login -user=root -pass=123 -id=141A
+mkdir -p -path=/solo
+mkfile -size=10 -path=/solo/test.txt
+
+#mkfile -size=15 -path=/home/user/docs/a.txt -r
+
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/report3.jpg -name=inode
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/report4.jpg -name=block

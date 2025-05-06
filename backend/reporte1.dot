@@ -1,0 +1,24 @@
+digraph MBR {
+node [shape=plaintext]
+ReporteMBR [label=<
+<table border='1' cellborder='1' cellspacing='0' style='rounded,filled' bgcolor='#e0e0e0'>
+<tr><td colspan='2'><b>REPORTE DE MBR</b></td></tr>
+<tr><td><b>mbr_tamano</b></td><td>20971520</td></tr>
+<tr><td><b>mbr_fecha_creacion</b></td><td>31/03/2025 12:20</td></tr>
+<tr><td><b>mbr_disk_signature</b></td><td>620</td></tr>
+<tr><td colspan='2'><b>Partition</b></td></tr>
+<tr><td><b>part_status</b></td><td>1</td></tr>
+<tr><td><b>part_type</b></td><td>P</td></tr>
+<tr><td><b>part_fit</b></td><td>W</td></tr>
+<tr><td><b>part_start</b></td><td>165</td></tr>
+<tr><td><b>part_size</b></td><td>10485760</td></tr>
+<tr><td><b>part_name</b></td><td>Particion3</td></tr>
+<tr><td colspan='2'><b>Partition</b></td></tr>
+<tr><td><b>part_status</b></td><td>1</td></tr>
+<tr><td><b>part_type</b></td><td>P</td></tr>
+<tr><td><b>part_fit</b></td><td>W</td></tr>
+<tr><td><b>part_start</b></td><td>10485925</td></tr>
+<tr><td><b>part_size</b></td><td>8388608</td></tr>
+<tr><td><b>part_name</b></td><td>Particion4</td></tr>
+</table>>];
+}

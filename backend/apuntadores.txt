@@ -1,0 +1,60 @@
+#execute -path=apuntadores.txt
+
+# Crear disco de mayor tamaño
+mkdisk -size=50 -unit=M -path=./Discos/PruebaApuntadores.dsk
+
+# Crear partición de 40MB
+fdisk -size=40 -unit=M -path=./Discos/PruebaApuntadores.dsk -name=PartApuntadores
+
+# Montar la partición
+mount -path=./Discos/PruebaApuntadores.dsk -name=PartApuntadores
+mounted
+# Formatear en EXT2
+mkfs -id=141A
+# Iniciar sesión
+login -user=root -pass=123 -id=141A
+# Crear estructura de carpetas
+mkdir -p -path=/test/indirecto
+
+# Crear un archivo pequeño (usa bloques directos)
+#mkfile -path=/test/indirecto/archivo_directo.txt -size=512 -r
+#mkfile -path=/test/archivo_indirecto.txt -size=20480 -r
+#mkfile -path=/test/archivo_directo.txt -size=7680 -r
+#mkfile -path=/test/archivo_doble.txt -size=7680 -r
+
+# Bloques directos (máx. 12 bloques, 12*64 = 768 bytes)
+mkfile -path=/test/directo.txt -size=768 -r
+
+# Indirecto simple (usa ap13)
+mkfile -path=/test/indirecto.txt -size=8192 -r
+
+# Doble indirecto (usa ap14)
+#mkfile -path=/test/doble.txt -size=70000 -r
+
+
+# Crear un archivo que ocupe más de 12 bloques (usa indirecto simple)
+#mkfile -path=/test/indirecto/archivo_indirecto1.txt -size=10000 
+
+# Crear un archivo que use apuntador doble indirecto (más grande)
+#mkfile -path=/test/indirecto/archivo_doble.txt -size=500000 
+
+# Crear un archivo enorme que necesite triple indirecto
+#mkfile -path=/test/indirecto/archivo_triple.txt -size=2000000 
+
+
+# Generar reportes
+#rep -id=142A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/inodos_apuntadores.jpg -name=inode
+#rep -id=142A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/bloques_apuntadores.jpg -name=block
+#rep -id=142A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/bm_inode.txt -name=bm_inode
+#rep -id=142A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/bm_block.txt -name=bm_block
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/report7.jpg -name=tree
+#rep -id=142A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/superbloque.jpg -name=sb
+#rep -id=142A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/a_report.txt -path_file_ls=/test/archivo_doble.txt -name=file
+#rep -id=142A -path=/home/emilio/Escritorio/reportes/directo.txt -path_file_ls=/test/directo.txt -name=file
+#rep -id=142A -path=/home/emilio/Escritorio/reportes/indirecto.txt -path_file_ls=/test/indirecto.txt -name=file
+#rep -id=142A -path=/home/emilio/Escritorio/reportes/doble.txt -path_file_ls=/test/doble.txt -name=file
+#rep -id=142A -path=/home/emilio/Escritorio/reportes/triple.txt -path_file_ls=/test/triple.txt -name=file
+
+
+
+

@@ -1,0 +1,136 @@
+digraph Tree {
+rankdir=LR;
+node [shape=plaintext];
+inodo0 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2'><b>Inodo 0 (Carpeta)</b></td></tr>
+<tr><td>i_type</td><td>0</td></tr>
+<tr><td>op0</td><td>apuntador directo</td></tr>
+<tr><td>ap0</td><td>0</td></tr>
+<tr><td>op1</td><td>apuntador indirecto</td></tr>
+<tr><td>ap13</td><td>-1</td></tr>
+<tr><td>op2</td><td>doble indirecto</td></tr>
+<tr><td>ap14</td><td>-1</td></tr>
+<tr><td>i_perm</td><td>664</td></tr>
+</table>>];
+block0 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2'><b>Bloque Carpeta 0</b></td></tr>
+<tr><td>.</td><td>0</td></tr>
+<tr><td>..</td><td>0</td></tr>
+<tr><td>users.txt</td><td>1</td></tr>
+<tr><td>test</td><td>2</td></tr>
+</table>>];
+inodo0 -> block0;
+block0 -> inodo1;
+inodo1 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2'><b>Inodo 1 (Archivo)</b></td></tr>
+<tr><td>i_type</td><td>1</td></tr>
+<tr><td>op0</td><td>apuntador directo</td></tr>
+<tr><td>ap0</td><td>1</td></tr>
+<tr><td>op1</td><td>apuntador indirecto</td></tr>
+<tr><td>ap13</td><td>-1</td></tr>
+<tr><td>op2</td><td>doble indirecto</td></tr>
+<tr><td>ap14</td><td>-1</td></tr>
+<tr><td>i_perm</td><td></td></tr>
+</table>>];
+block1 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 1</b></td></tr>
+<tr><td>1,G,root<br/>1,U,root,root,123<br/></td></tr>
+</table>>];
+inodo1 -> block1;
+block0 -> inodo2;
+inodo2 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='2'><b>Inodo 2 (Archivo)</b></td></tr>
+<tr><td>i_type</td><td>1</td></tr>
+<tr><td>op0</td><td>apuntador directo</td></tr>
+<tr><td>ap0</td><td>16</td></tr>
+<tr><td>op1</td><td>apuntador indirecto</td></tr>
+<tr><td>ap13</td><td>45</td></tr>
+<tr><td>op2</td><td>doble indirecto</td></tr>
+<tr><td>ap14</td><td>-1</td></tr>
+<tr><td>i_perm</td><td>664</td></tr>
+</table>>];
+block16 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 16</b></td></tr>
+<tr><td>0123456789012345678901234567890123456789012345678901234567890123</td></tr>
+</table>>];
+inodo2 -> block16;
+block17 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 17</b></td></tr>
+<tr><td>4567890123456789012345678901234567890123456789012345678901234567</td></tr>
+</table>>];
+inodo2 -> block17;
+block18 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 18</b></td></tr>
+<tr><td>8901234567890123456789012345678901234567890123456789012345678901</td></tr>
+</table>>];
+inodo2 -> block18;
+block19 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 19</b></td></tr>
+<tr><td>2345678901234567890123456789012345678901234567890123456789012345</td></tr>
+</table>>];
+inodo2 -> block19;
+block20 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 20</b></td></tr>
+<tr><td>6789012345678901234567890123456789012345678901234567890123456789</td></tr>
+</table>>];
+inodo2 -> block20;
+block21 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 21</b></td></tr>
+<tr><td>0123456789012345678901234567890123456789012345678901234567890123</td></tr>
+</table>>];
+inodo2 -> block21;
+block22 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 22</b></td></tr>
+<tr><td>4567890123456789012345678901234567890123456789012345678901234567</td></tr>
+</table>>];
+inodo2 -> block22;
+block23 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 23</b></td></tr>
+<tr><td>8901234567890123456789012345678901234567890123456789012345678901</td></tr>
+</table>>];
+inodo2 -> block23;
+block24 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 24</b></td></tr>
+<tr><td>2345678901234567890123456789012345678901234567890123456789012345</td></tr>
+</table>>];
+inodo2 -> block24;
+block25 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 25</b></td></tr>
+<tr><td>6789012345678901234567890123456789012345678901234567890123456789</td></tr>
+</table>>];
+inodo2 -> block25;
+block26 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 26</b></td></tr>
+<tr><td>0123456789012345678901234567890123456789012345678901234567890123</td></tr>
+</table>>];
+inodo2 -> block26;
+block27 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td><b>Bloque Archivo 27</b></td></tr>
+<tr><td>4567890123456789012345678901234567890123456789012345678901234567</td></tr>
+</table>>];
+inodo2 -> block27;
+indirect45 [label=<
+<table border='1' cellborder='1' cellspacing='0'>
+<tr><td colspan='1'><b>Bloque Indirecto 45</b></td></tr>
+<tr><td>46</td></tr>
+<tr><td>63</td></tr>
+</table>>];
+inodo2 -> indirect45;
+}

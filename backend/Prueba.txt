@@ -1,0 +1,38 @@
+# Crear un nuevo disco
+mkdisk -size=5 -unit=M -path=./Discos/DiscoInodoExt.dsk
+
+# Crear partición primaria
+fdisk -size=4 -unit=M -path=./Discos/DiscoInodoExt.dsk -name=PartInExt
+
+# Montar partición
+mount -path=./Discos/DiscoInodoExt.dsk -name=PartInExt
+
+# Mostrar particiones montadas para saber ID
+mounted
+
+# Formatear partición (usa el ID mostrado por mounted)
+mkfs -id=141A
+
+# Login con usuario root
+login -user=root -pass=123 -id=141A
+
+# Crear una carpeta y subcarpetas
+mkdir -p -path=/home/user/docs
+mkdir -p -path=/home/user/img
+mkdir -p -path=/var/log
+
+# Crear archivos en distintas rutas
+mkfile -path=/home/user/docs/file1.txt -size=20
+mkfile -path=/home/user/docs/file2.txt -size=25
+mkfile -path=/home/user/img/photo1.jpg -size=30
+mkfile -path=/home/user/img/photo2.jpg -size=30
+mkfile -path=/var/log/system.log -size=40
+
+# Crear archivo directamente en la raíz
+mkfile -path=/rootfile.txt -size=15
+
+# Mostrar reporte de inodos
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/inodos_extenso_rep.jpg -name=inode
+
+# Mostrar reporte de bloques
+rep -id=141A -path=/home/emilio/Escritorio/Github/MIA_1S2025_P1_202200314/backend/blocks_extenso_rep.jpg -name=block
